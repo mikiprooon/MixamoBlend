@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CEF098122D140D2200C7626B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF098102D140D2200C7626B /* OpenGL.framework */; };
+		CEF098132D140D2200C7626B /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF098112D140D2200C7626B /* GLUT.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		CEF098032D140B6700C7626B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		CEF098052D140B6700C7626B /* MixamoBlend */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MixamoBlend; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF098102D140D2200C7626B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		CEF098112D140D2200C7626B /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -35,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF098122D140D2200C7626B /* OpenGL.framework in Frameworks */,
+				CEF098132D140D2200C7626B /* GLUT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF098072D140B6700C7626B /* MixamoBlend */,
+				CEF0980F2D140D2200C7626B /* Frameworks */,
 				CEF098062D140B6700C7626B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +65,15 @@
 				CEF098052D140B6700C7626B /* MixamoBlend */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CEF0980F2D140D2200C7626B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEF098112D140D2200C7626B /* GLUT.framework */,
+				CEF098102D140D2200C7626B /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +264,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/opt/jpeg/include,
+					/Users/kajiryuya/Desktop/Github/MixamoBlend/lib/Eigen,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/opt/jpeg/lib;
+				OTHER_LDFLAGS = "-ljpeg";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -253,6 +278,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/opt/jpeg/include,
+					/Users/kajiryuya/Desktop/Github/MixamoBlend/lib/Eigen,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/opt/jpeg/lib;
+				OTHER_LDFLAGS = "-ljpeg";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
